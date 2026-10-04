@@ -20,3 +20,8 @@ Vite + React 18 + Tailwind CSS v4. Data is stored in browser localStorage (`ielt
 - "Check with Claude" features are now **Copy prompt for Claude** buttons: paste into any Claude chat, then paste the reply back.
 - Progress backup: Rewards > Save / Load (also loads old Ek's Daily Quest files).
 - Google Calendar: per-event links and .ics export (no live sync).
+
+## Deploy (Vercel)
+- Config lives in `vercel.json` (Vite preset, `npm ci`, output `dist/`).
+- Versions are pinned: exact deps in `package.json` + `package-lock.json`, Node in `.nvmrc` (22) and `engines` (20.19 to 26).
+- To upgrade deps on purpose: `npm install <pkg>@<version>`, then `npm run build` and commit the lockfile.
